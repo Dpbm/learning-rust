@@ -7,6 +7,11 @@ fn main(){
     let second = Rc::clone(&data);
 
     let third = Rc::downgrade(&data);
+
+    if let Some(third_data) = third.upgrade(){
+        println!("Weak data: {}", third_data);
+    }
+
     println!("strong references: {}", Rc::strong_count(&data));
     println!("weak references: {}", Rc::weak_count(&data));
 
