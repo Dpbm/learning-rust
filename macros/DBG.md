@@ -1,0 +1,4 @@
+- the `dbg!` macro takes the ownership of the expression (opposed to `println!` that takes the reference)
+	-  prints the and the line it was called
+	- also prints the resulting value
+	- finally it returns the ownership to the value
